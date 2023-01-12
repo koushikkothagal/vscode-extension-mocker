@@ -5,6 +5,7 @@ Extension to mock features of a VS Code extension. Useful in demos and such.
 ## Features
 
 - Mock inline completions by adding lines to settings
+- Mock codelens by selecting a line of text, right click and `Add new Codelens here`. You can then enter the codelens label and choose one of the existing commands to run when the codelens is clicked.
 
 ## Extension Settings
 

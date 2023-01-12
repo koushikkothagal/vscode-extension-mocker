@@ -6,7 +6,7 @@
   "displayName": "Extension mocker",
   "publisher": "KoushikKothagal",
   "description": "Mock VS Code extension features for demos and such",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "url": "https://github.com/koushikkothagal/vscode-extension-mocker"
   },
@@ -22,7 +22,18 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
+      {
+				"command": "mocker.addCodeLens",
+				"title": "Add new Codelens here"
+			}
     ],
+    "menus": {
+      "editor/context": [
+        {
+        "command": "mocker.addCodeLens"
+        }
+      ]
+    },
     "configuration": {
       "title": "Extension mocker",
       "properties": {

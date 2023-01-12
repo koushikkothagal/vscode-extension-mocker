@@ -1,8 +1,6 @@
 import { CodeLensData } from "./state-types";
 
 const codeLensDataList: CodeLensData[] = [
-    { tokenString: escapeRegExp(`console.log('blah');`), codeLensLabel: 'Run this' },
-    { tokenString: `testing`, codeLensLabel: 'Yep' }
 ];
 
 export const getCodeLensState = () :CodeLensData[] => {
@@ -10,6 +8,7 @@ export const getCodeLensState = () :CodeLensData[] => {
 };
 
 export const addCodeLens = (codeLensData: CodeLensData) => {
+    codeLensData.tokenString = escapeRegExp(codeLensData.tokenString);
     codeLensDataList.push(codeLensData);
 };
 
